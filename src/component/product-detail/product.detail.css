@@ -37,6 +37,7 @@
   background-size: cover;
   height: 45%;
   border-bottom: 3px solid var(--color-black);
+  background-image: url(".././../assets/product.png");
 }
 
 .content-container {

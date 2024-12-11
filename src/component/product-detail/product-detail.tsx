@@ -30,12 +30,7 @@ const ProductDetail = () => {
   return (
     <div className="modal">
       <div className="product-container">
-        <div
-          className="image-container"
-          style={{
-            backgroundImage: `url(${product?.imageUrl})`,
-          }}
-        >
+        <div className="image-container">
           <img
             className="cross-icon"
             src={crossIcon}

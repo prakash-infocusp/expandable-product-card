@@ -11,6 +11,7 @@
   background-size: cover;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
+  background-image: url(".././../assets/product-small.png");
 }
 
 .info-box {

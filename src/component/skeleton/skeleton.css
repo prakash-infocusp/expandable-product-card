@@ -49,12 +49,14 @@
 
 .c-item {
   padding: 10px;
-  width: 370px;
+  width: 100%;
+  max-width: 500px;
   background-color: #fff;
+  margin-bottom: 30px;
 }
 
 .c-item__top .c-skeleton-square {
-  height: 195px;
+  height: 335px;
   width: 100%;
 
   opacity: 0.99;

@@ -12,10 +12,7 @@ function Skeleton() {
           <div className="c-skeleton-line" />
         </h3>
       </div>
-      <div className="c-item__bottom">
-        <div className="c-skeleton-line" />
-        <div className="c-skeleton-line" />
-      </div>
+
       <div className="c-item__add">
         <div className="c-skeleton-square" />
       </div>

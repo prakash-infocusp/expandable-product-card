@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import { ProductData } from "../../api/product-api";
 import "./product.css";
 
-const Product = ({ id, title, description, imageUrl }: ProductData) => {
+const Product = ({ id, title, description }: ProductData) => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
@@ -10,12 +10,7 @@ const Product = ({ id, title, description, imageUrl }: ProductData) => {
   };
 
   return (
-    <div
-      className="product-card"
-      style={{
-        backgroundImage: `url(${imageUrl})`,
-      }}
-    >
+    <div className="product-card">
       <div className="info-box">
         <span className="product-title">{title}</span>
         <span className="product-description">{description}</span>
