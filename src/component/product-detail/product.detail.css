@@ -1,0 +1,116 @@
+.modal {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  position: relative;
+  height: 95%;
+  box-shadow: var(--shadow);
+  max-width: 500px;
+  animation: scaleInVertical 0.6s ease-out forwards;
+}
+
+.cross-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 45%;
+  border-bottom: 3px solid var(--color-black);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  gap: 10px;
+  height: 55%;
+  padding: 24px 20px;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  background-color: #e6d2b7;
+  background: var(--gradient);
+  backdrop-filter: blur(10px);
+}
+
+.content-container .product-title {
+  font-family: var(--font-fraunces);
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 54px;
+  color: var(--color-black);
+  width: 100%;
+}
+
+.content-container .product-description {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: var(--color-black);
+  width: 100%;
+}
+
+.content-container .product-info {
+  display: flex;
+  flex: 1;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color: var(--color-black);
+  overflow-y: auto;
+  width: 100%;
+}
+
+.content-container .product-button {
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 12px;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20.57px;
+  border-radius: var(--button-border-radius);
+  background: var(--color-white);
+  border: 1px solid var(--color-white);
+  width: 100%;
+  cursor: pointer;
+}
+
+.content-container .product-button:hover,
+.content-container .product-button:focus {
+  background-color: var(--color-light-gray);
+  transform: translateY(-2px);
+}
+
+@keyframes scaleInVertical {
+  0% {
+    transform: scaleY(0.7) scaleX(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+:root {
+  --font-fraunces: "Fraunces", serif;
+  --font-inter: "Inter", sans-serif;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --bg-opacity: #ffffff80;
+  --color-light-gray: #f5f5f5;
+  --button-padding: 12px 132px;
+  --button-border-radius: 8px;
+  --border-radius: 15px;
+  --gap: 10px;
+  --product-height: 378px;
+  --info-box-height: 156px;
+  --shadow: 0px 2px 4px 0px rgba(170, 162, 151, 0.28),
+    0px 4px 4px 0px rgba(192, 174, 151, 0.5),
+    0px 8px 16px 0px rgba(171, 155, 135, 0.82);
+  --gradient: linear-gradient(0deg, rgba(231, 212, 187, 0) 0%, #e8d9c5 25.7%);
+}
+
+@media (min-width: 550px) {
+  :root {
+    --product-height: 578px;
+  }
+}
+
+body {
+  margin: 0;
+}

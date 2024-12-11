@@ -1,0 +1,81 @@
+.product-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: var(--product-height);
+  width: 100%;
+  max-width: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  position: absolute;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 0;
+  padding: 12px 10px;
+  background-color: var(--bg-opacity);
+  backdrop-filter: blur(2px);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.product-title {
+  font-family: var(--font-fraunces);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: var(--color-black);
+}
+
+.product-description {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color: var(--color-black);
+}
+
+.product-button {
+  padding: 12px;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20.57px;
+  border-radius: var(--button-border-radius);
+  background: var(--color-white);
+  width: 100%;
+  border: 1px solid var(--color-white);
+  cursor: pointer;
+  animation: buttonFadeIn ease-out 0.9s forwards;
+}
+
+.product-button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-button:hover,
+.product-button:focus {
+  background-color: var(--color-light-gray);
+  transform: translateY(-2px);
+}
+
+@keyframes buttonFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
