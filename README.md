@@ -34,11 +34,21 @@ https://expandable-product-card-ui.vercel.app/
 - Install the dependencies using `npm ci`
 - Run the command `npm run dev`
 
+## Implementation details
+
+- React Router is used to manage the app's routing.
+- The first page is the Product List, which uses simulated hardcoded data from the product-api.ts file. - A delay of 1 second is added using the setTimeout function to mimic a real API call.
+- A Skeleton UI is displayed while the product list is loading.
+- Clicking on a product navigates to the Product Detail page using routing.
+- Keyframe animations are applied for smooth transitions when loading the product list and displaying the product detail page.
+- A Close (cross) button on the product detail page navigates the user back to the product list page.
+- Both the Product List and Product Detail are implemented as separate components, each with its own corresponding CSS file for styling.
+
 ## Animation implementation details
 
 - Custom Skeleton UI before loading the product list.
 - CSS Keyframe FadeInUp animation for smooth loading of the product list.
-  -CSS Keyframe ScaleInVertical animation for smooth expansion of the product detail card.
+- CSS Keyframe ScaleInVertical animation for smooth expansion of the product detail card.
 
   ## Performance metrics from lighthouse
 

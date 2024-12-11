@@ -9,14 +9,10 @@ const ProductList = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      fetchProductData().then((data: ProductData[]) => {
-        setProducts(data);
-        setIsLoading(false);
-      });
-    }, 1500);
-
-    return () => clearTimeout(timer);
+    fetchProductData().then((data: ProductData[]) => {
+      setProducts(data);
+      setIsLoading(false);
+    });
   }, []);
 
   return (

@@ -6,6 +6,9 @@ export interface ProductData {
   imageUrl: string;
 }
 
+// first time delay for skeleton UI to be visible
+let delay = 1000;
+
 export const fetchProductData = (): Promise<ProductData[]> => {
   return new Promise((resolve) => {
     setInterval(() => {
@@ -60,7 +63,8 @@ export const fetchProductData = (): Promise<ProductData[]> => {
             "https://s3-alpha-sig.figma.com/img/b8be/df1d/78873f68b224e62bcefb43f2d1d2d72f?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=leROmd1RGAhOejFp8mf77JIjfOYRUMYzYIGeE0YUs0fL1pRbJv-4DtKEq8qWeGUm5yLBBf3kdCMijrerx8BRe7AvBn-MhKrADHUBsXn57hHwvLT5sxN7C7pvvdEdnoaCu9jf~TjI4638g0xy80gyQed2qcxk4c9s0zIH3xubRcelEbbolwrNyXOxWxNy~mFKWmci7IbWwVTNbjlO7MKHju5Eu0SPhzXxvOpOG0-PgH9B2r0YilfozDmOwnEb1IwqrZ7XmVN2a5Z-P1~G8ey8oFcLTr19hbPpjRZO4pCmTqe~rWyqhuP1vkLaCSG3Rck~qnsBzwTd-jckvWHrUjVj0Q__",
         },
       ]);
-    }, 1000);
+      delay = 0;
+    }, delay);
   });
 };
 
