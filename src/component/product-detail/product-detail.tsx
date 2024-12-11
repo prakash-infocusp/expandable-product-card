@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  fetchProductDataWithNoDelay,
-  ProductData,
-} from "../../api/product-api";
+import { fetchProductData, ProductData } from "../../api/product-api";
 import { useNavigate, useParams } from "react-router";
 import crossIcon from "../../assets/cross.svg";
 import "./product.detail.css";
@@ -13,7 +10,7 @@ const ProductDetail = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchProductDataWithNoDelay().then((data: ProductData[]) => {
+    fetchProductData().then((data: ProductData[]) => {
       const productDetail = data.find(
         (product) => product.id.toString() === id
       );
