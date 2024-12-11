@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import { fetchProductData, ProductData } from "../../api/product-api";
+import {
+  fetchProductDataWithNoDelay,
+  ProductData,
+} from "../../api/product-api";
 import { useNavigate, useParams } from "react-router";
 import crossIcon from "../../assets/cross.svg";
 import "./product.detail.css";
@@ -10,7 +13,7 @@ const ProductDetail = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchProductData().then((data: ProductData[]) => {
+    fetchProductDataWithNoDelay().then((data: ProductData[]) => {
       const productDetail = data.find(
         (product) => product.id.toString() === id
       );
@@ -24,17 +27,13 @@ const ProductDetail = () => {
     navigate("/");
   };
 
-  if (!product) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div className="modal">
       <div className="product-container">
         <div
           className="image-container"
           style={{
-            backgroundImage: `url(${product.imageUrl})`,
+            backgroundImage: `url(${product?.imageUrl})`,
           }}
         >
           <img
@@ -45,9 +44,9 @@ const ProductDetail = () => {
           />
         </div>
         <div className="content-container">
-          <span className="product-title">{product.title}</span>
-          <span className="product-description">{product.description}</span>
-          <span className="product-info">{product.info}</span>
+          <span className="product-title">{product?.title}</span>
+          <span className="product-description">{product?.description}</span>
+          <span className="product-info">{product?.info}</span>
           <button className="product-button">BUY NOW</button>
         </div>
       </div>
