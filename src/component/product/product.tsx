@@ -7,6 +7,15 @@ const Product = ({ id, title, description }: ProductData) => {
 
   const handleNavigate = () => {
     navigate(`/product/${id}`);
+
+    if (!document.startViewTransition) {
+      navigate(`/product/${id}`);
+      return;
+    }
+
+    document.startViewTransition(() => {
+      navigate(`/product/${id}`);
+    });
   };
 
   return (

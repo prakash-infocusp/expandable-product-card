@@ -25,7 +25,7 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="modal">
+    <div className="modal" style={{ viewTransitionName: "modal" }}>
       <div className="product-container">
         <div className="image-container">
           <img
@@ -35,7 +35,10 @@ const ProductDetail = () => {
             onClick={handleClose}
           />
         </div>
-        <div className="content-container">
+        <div
+          className="content-container"
+          style={{ viewTransitionName: "content-container" }}
+        >
           <span className="product-title">{product?.title}</span>
           <span className="product-description">{product?.description}</span>
           <span className="product-info">{product?.info}</span>

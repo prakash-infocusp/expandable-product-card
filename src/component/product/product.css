@@ -80,3 +80,31 @@
     transform: translateY(0);
   }
 }
+
+@keyframes scaleInVertical {
+  0% {
+    transform: scaleY(0.7) scaleX(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes opacityFade {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+::view-transition-new(content-container) {
+  animation: opacityFade 1.5s ease-out forwards;
+}
+
+::view-transition-new(modal) {
+  animation: scaleInVertical 1s ease-out forwards;
+}
