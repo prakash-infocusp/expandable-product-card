@@ -80,6 +80,7 @@
   font-family: var(--font-inter);
   font-weight: 400;
   font-size: 17px;
+  flex: 1;
   line-height: 21px;
   color: var(--color-black);
   overflow-y: auto;
