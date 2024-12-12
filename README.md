@@ -50,6 +50,6 @@ https://expandable-product-card-ui.vercel.app/
 - CSS Keyframe FadeInUp animation for smooth loading of the product list.
 - CSS Keyframe ScaleInVertical animation for smooth expansion of the product detail card.
 
-  ## Performance metrics from lighthouse
+## Performance metrics from lighthouse
 
-  ![Alt text](src/assets/lighthouse.png)
+![Alt text](src/assets/lighthouse.png)
